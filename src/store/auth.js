@@ -26,7 +26,7 @@ const authSlicer = createSlice({
 export const signIn =  (props) => {
     return async (dispatch) => {
         const signinData = async () => {
-            const response =  await fetch('https://food-app-74f07-default-rtdb.firebaseio.com/auth.json',{
+            const response =  await fetch('https://food-ordering-app-bf020-default-rtdb.firebaseio.com/auth.json',{
                 method : 'POST',
                 body : JSON.stringify({
                     username : props.username,
@@ -53,7 +53,7 @@ export const logIn = () => {
     return async (dispatch) => {
         
         const  fetchUserData = async () => {
-            const response = await fetch('https://food-app-74f07-default-rtdb.firebaseio.com/auth.json');
+            const response = await fetch('https://food-ordering-app-bf020-default-rtdb.firebaseio.com/auth.json');
 
             if(!response.ok){
                 throw new Error('something went wrong while fetching data');

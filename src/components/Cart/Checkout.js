@@ -17,7 +17,7 @@ const Checkout = (props) => {
         const storeAddress = async () => {
 
             dispatch(uiActions.loadingOrderHandler());
-            const response = await fetch('https://food-app-74f07-default-rtdb.firebaseio.com/address.json', {
+            const response = await fetch('https://food-ordering-app-bf020-default-rtdb.firebaseio.com/address.json', {
                 method : 'PUT',
                 body : JSON.stringify({
                     name : nameRef.current.value,

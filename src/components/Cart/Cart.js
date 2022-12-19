@@ -53,8 +53,8 @@ const Cart = (props) => {
           </div>
         </>
       }
-      {ui.loadingOrder && <h3>placing your order, please wait...</h3>}
-      {ui.orderPlaced && <h3>Your order is placed, thankyou for ordering </h3>}
+      {ui.loadingOrder && <h3>Placing your Order, please wait...</h3>}
+      {ui.orderPlaced && <h3>Your Order is Placed, Thankyou for Ordering </h3>}
       {ui.placeOrder&&!ui.loadingOrder&&!ui.orderPlaced && <Checkout onConfirm={onConfirmHandler} onCancel={()=>{dispatch(uiActions.placeOrderHandler())}}/>}
     </Modal>
   );

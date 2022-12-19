@@ -4,7 +4,7 @@ import { cartItemsActions} from "./cart";
 export const getItems = () => {
     return async (dispatch) => {
         const getData = async () => {
-            const response = await fetch('https://food-app-74f07-default-rtdb.firebaseio.com/cart.json');
+            const response = await fetch('https://food-ordering-app-bf020-default-rtdb.firebaseio.com/cart.json');
             if(!response.ok) {
                 throw new Error('could not be able to get cart items');
             }
@@ -53,7 +53,7 @@ export const putItems = (cart) => {
         // );
 
         const putData = async () => {
-            const response = await fetch('https://food-app-74f07-default-rtdb.firebaseio.com/cart.json', {
+            const response = await fetch('https://food-ordering-app-bf020-default-rtdb.firebaseio.com/cart.json', {
                 method : 'PUT',
                 body : JSON.stringify({
                     items : cart.Items,
